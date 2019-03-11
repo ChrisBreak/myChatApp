@@ -15,3 +15,7 @@ On the client side, a cookie stores user information for 24hrs.
 message input:
 /nick name, changes user name, if it's unique.
 /nickcolor RRGGBB, changes user color.
+
+Testing for multiple users can only be done from different IPs.
+The online users list might not be accurate if a user opens ChatApp
+on multiple tabs or windows from the same IP.
