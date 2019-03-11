@@ -1,7 +1,6 @@
 Cristhian Sotelo-Plaza
-ID 30004060
-SENG513 B03 WINTER 2019
-Assignment 3
+
+Simple chat application, handles multiple users.
 
 Installs needed:
 npm install express --save
