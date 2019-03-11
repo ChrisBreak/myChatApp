@@ -1,0 +1,51 @@
+<!-- Cristhian Sotelo-Plaza
+      ID 30004060
+      SENG513 B03 WINTER 2019
+      Assignment 3  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/chatStyle.css" rel="stylesheet">
+    <script src="/jquery331.js"></script>
+    <script src="/chatCode.js"></script>
+    <title>ChatApp</title>
+  </head>
+  <body>
+    <center><div id="main">
+      <div id=topline>
+        <div id="userColor"><%= myColor %></div>
+        <div id="username"><%= user %></div>
+        <div id="firstlabel">You are: <%= user %></div>
+        <div id="seclabel">Online users:</div>
+        <div id="thirdlabel">Online users:</div>
+      </div>
+        <div id="displays">
+          <div id="msgwindow">
+            <ul id="messages">
+              <% msgs.forEach(function(msg){ %>
+        				<li style="color: <%= msg.color %>;"><%= msg.message %></li>
+        			<% })%>
+            </ul>
+          </div>
+          <div id="fourthlabel">You are: <%= user %></div>
+          <div id="userswindow">
+            <ul id="userlist">
+              <% actives.forEach(function(actUser){ %>
+        				<li style="color:<%= actUser.color %>;"><%= actUser.name %></li>
+        			<% })%>
+            </ul>
+          </div>
+        </div>
+          <form id="controls" action="">
+            <input type="text" id="userinput"/>
+            <button type="submit" id="send">send</button>
+          </form>
+
+    </div></center>
+    <script src="/socket.io/socket.io.js"></script>
+  </body>
+</html>
